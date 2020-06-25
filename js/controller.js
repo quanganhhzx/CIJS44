@@ -44,4 +44,7 @@ controller.login = ({email, password}) => {
   } else {
     view.setErrorMessage('error-password', '')
   }
+  if(email !== '' && password !== '') {
+    model.login(email, password)
+  }
 }
